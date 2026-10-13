@@ -1,0 +1,32 @@
+
+
+
+
+<div class="services-item">
+
+ // <div class="services-photo" style="background-image: url({{ asset('uploads/'.$item->photo) }})"></div>
+
+<div class="services-text">
+                                    <h3><a href="{{ url('service') }}/{{ $item->slug }}">{{ $item->heading }}</a></h3>
+                                    {{ $item->short_content }}
+                                    <div class="services-link">
+                                        <a href="{{ url('service') }}/{{ $item->slug }}">{{ READ_MORE }}<i class="fa fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>
+</div>
+
+
+
+
+
+ <div class="services-text">
+                                    
+                                    <h3>
+                                    <div class="choose-icon"> <img src="{{ asset('uploads/'.$item->photo) }}" alt="{{ $item->photo }}"></div>
+                                    <a href="{{ url('service') }}/{{ $item->slug }}">{{ $item->heading }}</a>
+                                    </h3>
+                                    {{ $item->short_content }}
+                                    <div class="services-link">
+                                        <a href="{{ url('service') }}/{{ $item->slug }}">{{ READ_MORE }}<i class="fa fa-angle-double-right"></i></a>
+                                    </div>
+                                </div>

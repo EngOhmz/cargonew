@@ -1,0 +1,24 @@
+composer create-project laravel/laravel nhc
+
+composer require laravel/ui --dev
+
+php artisan ui bootstrap --auth
+
+npm install
+
+npm run dev
+
+
+
+
+composer require laravel/socialite
+
+
+
+outh 
+
+google
+
+client id
+
+227329134949-i0kcjje7omq1n1a4fmmuscu1u61u4m25.apps.googleusercontent.com

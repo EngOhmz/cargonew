@@ -1,0 +1,34 @@
+
+/node_modules
+/vendor
+
+# Environment configuration
+.env
+.env.*
+.env.backup
+.phpunit.result.cache
+
+# Build & runtime artifacts
+/public/hot
+/public/storage
+/public/storage/*
+/storage
+/storage/*.key
+/bootstrap/cache
+/bootstrap/cache/*.php
+/storage/logs
+/storage/framework
+
+# Local-only config
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+
+# Log files
+npm-debug.log
+yarn-error.log
+*.log
+
+# IDE settings
+/.idea
+/.vscode

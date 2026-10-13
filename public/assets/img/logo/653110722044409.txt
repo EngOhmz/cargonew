@@ -1,0 +1,11 @@
+    Route::group(['prefix' => 'members'], function(){
+        Route::resource('dashboard','Members\HomeController');
+        Route::resource('register', 'Members\MembersController');
+        Route::resource('register2', 'CompanyController');
+       // Route::any('member_cooperate', 'CompanyController@member_cooperate')->name('member_cooperate');
+        Route::any('member_type', 'Members\MembersController@reg_type')->name('member_type');
+        Route::any('member_class', 'Members\MembersController@member_class')->name('member_class');
+        //Route::any('tax', 'Payroll\GetPaymentController@tax');
+
+        });
+Route::any('member_cooperate', 'CompanyController@member_cooperate')->name('member_cooperate');

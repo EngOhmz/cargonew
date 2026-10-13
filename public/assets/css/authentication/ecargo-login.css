@@ -1,0 +1,403 @@
+:root {
+    --ecargo-navy: #003459;
+    --ecargo-primary: #007EA7;
+    --ecargo-blue: #00A8E8;
+    --ecargo-dark: #00171F;
+    --ecargo-surface: #ffffff;
+    --ecargo-muted: #64748b;
+    --ecargo-border: #e2e8f0;
+    --ecargo-shadow: 0 25px 50px -12px rgba(0, 23, 31, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body.ecargo-login-body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8;
+    color: var(--ecargo-dark);
+}
+
+.ecargo-login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+}
+
+.ecargo-login-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(160deg, #f8fafc 0%, #eef4f8 100%);
+}
+
+.ecargo-login-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--ecargo-surface);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--ecargo-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.ecargo-brand {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ecargo-brand img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 52, 89, 0.12);
+}
+
+.ecargo-brand h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--ecargo-navy);
+}
+
+.ecargo-brand p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    color: var(--ecargo-muted);
+    font-weight: 500;
+}
+
+.ecargo-field {
+    margin-bottom: 1.25rem;
+}
+
+.ecargo-field label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ecargo-navy);
+    margin-bottom: 0.45rem;
+}
+
+.ecargo-input-wrap {
+    position: relative;
+}
+
+.ecargo-input-wrap i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 1.1rem;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+.ecargo-input-wrap input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    border: 1.5px solid var(--ecargo-border);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: #f8fafc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.ecargo-input-wrap input:focus {
+    outline: none;
+    border-color: var(--ecargo-primary);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 126, 167, 0.12);
+}
+
+.ecargo-input-wrap input:focus + i,
+.ecargo-input-wrap:focus-within i.las.la-lock,
+.ecargo-input-wrap:focus-within i.las.la-user-alt {
+    color: var(--ecargo-primary);
+}
+
+.ecargo-input-wrap input.is-invalid {
+    border-color: #dc3545;
+}
+
+.ecargo-password-wrap input {
+    padding-right: 2.85rem;
+}
+
+.ecargo-password-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: #64748b;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.ecargo-password-toggle i {
+    position: static;
+    transform: none;
+    pointer-events: none;
+    font-size: 1.25rem;
+    color: inherit;
+}
+
+.ecargo-password-toggle:hover,
+.ecargo-password-toggle:focus {
+    color: var(--ecargo-primary);
+    background: rgba(0, 126, 167, 0.08);
+    outline: none;
+}
+
+.ecargo-remember {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.85rem;
+    color: var(--ecargo-muted);
+    cursor: pointer;
+    user-select: none;
+}
+
+.ecargo-remember input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--ecargo-primary);
+}
+
+.ecargo-submit {
+    width: 100%;
+    padding: 0.95rem 1.25rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 0.03em;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--ecargo-navy) 0%, var(--ecargo-primary) 55%, var(--ecargo-blue) 100%);
+    box-shadow: 0 10px 25px rgba(0, 126, 167, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ecargo-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(0, 126, 167, 0.4);
+}
+
+.ecargo-submit:active {
+    transform: translateY(0);
+}
+
+.ecargo-hero {
+    flex: 1.15;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, var(--ecargo-dark) 0%, var(--ecargo-navy) 40%, var(--ecargo-primary) 100%);
+    color: #fff;
+    padding: 3rem;
+}
+
+@media (min-width: 992px) {
+    .ecargo-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.ecargo-hero::before {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(0, 168, 232, 0.15);
+    top: -120px;
+    right: -80px;
+}
+
+.ecargo-hero::after {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    bottom: -60px;
+    left: -40px;
+}
+
+.ecargo-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+}
+
+.ecargo-hero-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 12px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(8px);
+}
+
+.ecargo-hero h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 1rem;
+}
+
+.ecargo-hero > .ecargo-hero-content > p.lead {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.ecargo-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem;
+}
+
+.ecargo-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.ecargo-features li i {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 0.9rem;
+}
+
+.ecargo-support {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.ecargo-support a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.ecargo-support a:hover {
+    border-bottom-color: #fff;
+}
+
+.ecargo-alert-wrap .alert {
+    border-radius: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+#load_screen .neptune-loader-heading {
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    color: #dc3545;
+}
+
+@media (max-width: 991px) {
+    .ecargo-login-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .ecargo-brand img {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+.ecargo-login-card.ecargo-register-card {
+    max-width: 460px;
+}
+
+.ecargo-trial-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ecargo-primary);
+    background: rgba(0, 126, 167, 0.1);
+    border: 1px solid rgba(0, 126, 167, 0.2);
+}
+
+.ecargo-note {
+    margin: 0 0 1.25rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--ecargo-navy);
+    background: #f0f9ff;
+    border: 1px solid rgba(0, 126, 167, 0.15);
+}
+
+.ecargo-footer-link {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--ecargo-muted);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.ecargo-footer-link a {
+    color: var(--ecargo-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ecargo-footer-link a:hover {
+    text-decoration: underline;
+}

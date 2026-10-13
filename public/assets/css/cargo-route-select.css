@@ -1,0 +1,363 @@
+/* Madekenya — route select (matches system form-control-lg) */
+:root {
+    --cargo-brand: #ac0d0d;
+    --cargo-brand-dark: #8a0a0a;
+    --cargo-brand-soft: #fef2f2;
+    --cargo-brand-ring: rgba(172, 13, 13, 0.15);
+    --cargo-input-border: #dcdcdc;
+    --cargo-input-text: #3b3f5c;
+    --cargo-input-radius: 6px;
+    --cargo-input-font: 19px;
+    --cargo-input-padding-y: 11px;
+    --cargo-input-padding-x: 20px;
+    --cargo-input-height: calc(1.4em + 1.4rem + 2px);
+}
+
+.cargo-route-field {
+    margin-bottom: 0;
+}
+
+.cargo-route-label {
+    display: block;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.cargo-route-label-hint {
+    font-weight: 500;
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-left: 0.25rem;
+}
+
+.cargo-route-select-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.cargo-route-select-wrap .select2-container {
+    width: 100% !important;
+    display: block;
+}
+
+/* Closed field — identical rhythm to .form-control.form-control-lg */
+.cargo-route-select-wrap .select2-container--default .select2-selection--single {
+    height: var(--cargo-input-height) !important;
+    min-height: var(--cargo-input-height) !important;
+    border: 1px solid var(--cargo-input-border) !important;
+    border-radius: var(--cargo-input-radius) !important;
+    background: #fff !important;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    font-size: var(--cargo-input-font);
+    color: var(--cargo-input-text);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cargo-route-select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 1.4 !important;
+    padding: var(--cargo-input-padding-y) var(--cargo-input-padding-x) !important;
+    color: var(--cargo-input-text);
+    font-size: var(--cargo-input-font) !important;
+    width: 100%;
+}
+
+.cargo-route-select-wrap .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+    top: 0;
+    right: 12px;
+    width: 24px;
+}
+
+.cargo-route-select-wrap .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-width: 6px 5px 0 5px;
+    border-color: #6c757d transparent transparent transparent;
+    margin-top: -2px;
+}
+
+.cargo-route-select-wrap .select2-container--default .select2-selection--single .select2-selection__clear {
+    font-size: 1.25rem;
+    margin-right: 0.35rem;
+    color: #acb0c3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cargo-route-select-wrap .select2-container--default.select2-container--focus .select2-selection--single,
+.cargo-route-select-wrap .select2-container--default.select2-container--open .select2-selection--single {
+    border-color: var(--cargo-brand) !important;
+    box-shadow: 0 0 5px 2px rgba(194, 213, 255, 0.1) !important;
+}
+
+/* Route pill in selected value */
+.cargo-route-pill {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.55rem;
+    font-size: var(--cargo-input-font);
+    line-height: 1.4;
+}
+
+.cargo-route-from,
+.cargo-route-to {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+.cargo-route-from {
+    background: var(--cargo-brand-soft);
+    color: var(--cargo-brand-dark);
+    border: 1px solid #fecaca;
+}
+
+.cargo-route-to {
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.cargo-route-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--cargo-brand);
+    font-size: 0.85rem;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.cargo-route-placeholder {
+    color: #acb0c3;
+    font-weight: 400;
+    font-size: var(--cargo-input-font);
+}
+
+.cargo-route-placeholder i {
+    display: none;
+}
+
+/* Dropdown list */
+.cargo-route-dropdown.select2-dropdown {
+    border-radius: var(--cargo-input-radius) !important;
+    border: 1px solid var(--cargo-input-border) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+    overflow: hidden;
+    background: #fff;
+    padding: 0;
+    font-size: var(--cargo-input-font);
+    z-index: 9999 !important;
+}
+
+.cargo-route-dropdown .select2-search--dropdown {
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.cargo-route-dropdown .select2-search--dropdown .select2-search__field {
+    border-radius: var(--cargo-input-radius);
+    border: 1px solid var(--cargo-input-border);
+    padding: var(--cargo-input-padding-y) var(--cargo-input-padding-x);
+    background: #fff;
+    font-size: var(--cargo-input-font);
+    min-height: var(--cargo-input-height);
+    line-height: 1.4;
+    color: var(--cargo-input-text);
+}
+
+.cargo-route-dropdown .select2-search--dropdown .select2-search__field:focus {
+    border-color: var(--cargo-brand);
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(194, 213, 255, 0.1);
+}
+
+.cargo-route-dropdown .select2-results__options {
+    max-height: 320px;
+    padding: 0;
+}
+
+.cargo-route-dropdown .select2-results__option {
+    padding: var(--cargo-input-padding-y) var(--cargo-input-padding-x);
+    margin: 0;
+    border-radius: 0;
+    min-height: var(--cargo-input-height);
+    display: flex;
+    align-items: center;
+    color: var(--cargo-input-text);
+    border-bottom: 1px solid #f1f2f3;
+    font-size: var(--cargo-input-font);
+}
+
+.cargo-route-dropdown .select2-results__option:last-child {
+    border-bottom: none;
+}
+
+.cargo-route-dropdown .select2-results__option[aria-selected="true"] {
+    background: #f8f9fa;
+}
+
+.cargo-route-dropdown .select2-results__option--highlighted[aria-selected] {
+    background: var(--cargo-brand-soft) !important;
+    color: var(--cargo-input-text) !important;
+    box-shadow: inset 3px 0 0 var(--cargo-brand);
+}
+
+.cargo-route-dropdown .select2-results__option--highlighted[aria-selected] .cargo-route-from {
+    background: #fee2e2;
+    color: var(--cargo-brand-dark);
+    border-color: #fca5a5;
+}
+
+.cargo-route-dropdown .select2-results__option--highlighted[aria-selected] .cargo-route-to {
+    background: #dcfce7;
+    color: #14532d;
+    border-color: #86efac;
+}
+
+.cargo-route-dropdown .select2-results__message {
+    color: #6c757d;
+    font-size: 1rem;
+    padding: var(--cargo-input-padding-y) var(--cargo-input-padding-x);
+    min-height: var(--cargo-input-height);
+    display: flex;
+    align-items: center;
+}
+
+/* Readonly (edit page) */
+.cargo-route-readonly {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.55rem;
+    padding: var(--cargo-input-padding-y) var(--cargo-input-padding-x);
+    background: #fff;
+    border-radius: var(--cargo-input-radius);
+    border: 1px solid var(--cargo-input-border);
+    width: 100%;
+    min-height: var(--cargo-input-height);
+    font-size: var(--cargo-input-font);
+}
+
+/* Registration page — match local form overrides */
+.registration-form .cargo-route-label {
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.registration-form .cargo-route-select-wrap .select2-container--default .select2-selection--single {
+    height: var(--cargo-input-height) !important;
+    min-height: var(--cargo-input-height) !important;
+    font-size: var(--cargo-input-font) !important;
+    border-color: #cbd5e1 !important;
+    border-radius: 8px !important;
+}
+
+.registration-form .cargo-route-select-wrap .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 1.4 !important;
+    padding: var(--cargo-input-padding-y) var(--cargo-input-padding-x) !important;
+    font-size: var(--cargo-input-font) !important;
+}
+
+.registration-form .cargo-route-select-wrap .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100% !important;
+}
+
+.registration-form .cargo-route-select-wrap .select2-container--default.select2-container--focus .select2-selection--single,
+.registration-form .cargo-route-select-wrap .select2-container--default.select2-container--open .select2-selection--single {
+    border-color: var(--cargo-brand) !important;
+    box-shadow: 0 0 0 3px var(--cargo-brand-ring) !important;
+}
+
+.registration-form .cargo-route-readonly {
+    border-color: #cbd5e1;
+    border-radius: 8px;
+}
+
+/* Route + drop-off grid (registration) */
+.cargo-route-drop-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .cargo-route-drop-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.cargo-route-drop-block {
+    min-width: 0;
+}
+
+.cargo-route-drop-block--highlight {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 4px solid var(--cargo-brand);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+}
+
+.cargo-route-drop-block--highlight .cargo-route-label {
+    color: var(--cargo-brand-dark);
+    font-weight: 700;
+}
+
+.cargo-route-drop-block--highlight .cargo-drop-mikoa {
+    background: #fff;
+    border-color: #cbd5e1;
+    min-height: var(--cargo-input-height);
+    font-size: var(--cargo-input-font);
+}
+
+.cargo-route-drop-block--highlight .cargo-drop-mikoa:focus {
+    border-color: var(--cargo-brand);
+    box-shadow: 0 0 0 3px var(--cargo-brand-ring);
+}
+
+.cargo-split-row .cargo-split-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.cargo-split-row .cargo-split-qty {
+    text-align: center;
+    font-weight: 600;
+}
+
+.cargo-split-total strong.cargo-split-sum,
+.cargo-split-total strong.cargo-split-target {
+    color: var(--cargo-brand-dark);
+}
+
+.cargo-drop-hint {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.82rem;
+}
+
+.cargo-split-destinations-wrap.cargo-split-invalid {
+    border-color: #fca5a5;
+    background: #fef2f2;
+}
+
+.cargo-split-destinations-wrap.cargo-split-valid {
+    border-color: #86efac;
+}

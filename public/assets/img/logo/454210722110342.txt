@@ -1,0 +1,16 @@
+  Route::group(['prefix' => 'pharmacy_purchases'], function () {
+Route::resource('pharmacy_purchases_supplier', 'Pharmacy\shop\SupplierController')->middleware('auth');
+Route::resource('pharmacy_purchases_items', 'Pharmacy\POS\ItemsController')->middleware('auth');
+Route::resource('pharmacy_purchases_purchase', 'Pharmacy\POS\PurchaseController')->middleware('auth');
+
+Route::get('pharmacy_purchases_findInvPrice', 'Pharmacy\POS\PurchaseController@findPrice')->middleware('auth'); 
+Route::get('pharmacy_purchases_invModal', 'Pharmacy\POS\PurchaseController@discountModal')->middleware('auth');
+Route::get('pharmacy_purchases_approve_purchase/{id}', 'Pharmacy\POS\PurchaseController@approve')->name('pharmacy_purchase.approve')->middleware('auth'); 
+Route::get('pharmacy_purchases_cancel/{id}', 'Pharmacy\POS\PurchaseController@cancel')->name('pharmacy_purchase.cancel')->middleware('auth'); 
+Route::get('pharmacy_purchases_receive/{id}', 'Pharmacy\POS\PurchaseController@receive')->name('pharmacy_purchase.receive')->middleware('auth'); 
+Route::get('pharmacy_purchases_make_payment/{id}', 'Pharmacy\POS\PurchaseController@make_payment')->name('pharmacy_purchase.pay')->middleware('auth'); 
+Route::get('pharmacy_purchase_pdfview',array('as'=>'pharmacy_purchase_pdfview','uses'=>'Pharmacy\POS\PurchaseController@inv_pdfview'))->middleware('auth');
+Route::get('pharmacy_purchases_order_payment/{id}', 'Pharmacy\orders\OrdersController@order_payment')->name('pharmacy_purchase_order.pay')->middleware('auth');
+Route::resource('pharmacy_purchase_payment', 'Pharmacy\POS\PurchasePaymentController')->middleware('auth');
+Route::any('pharmacy_creditors_report', 'Pharmacy\POS\PurchaseController@creditors_report')->middleware('auth');
+});

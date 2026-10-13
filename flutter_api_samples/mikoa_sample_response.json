@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "error": false,
+  "message": "successfully",
+  "mikoa": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "regional_name": "Dar es Salaam"
+    },
+    {
+      "id": 2,
+      "company_id": 1,
+      "regional_name": "Mwanza"
+    },
+    {
+      "id": 3,
+      "company_id": 1,
+      "regional_name": "Arusha"
+    },
+    {
+      "id": 4,
+      "company_id": 1,
+      "regional_name": "Dodoma"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+changing the template collor, modification on all.css file
+
+from #ac0d0d to #057df5

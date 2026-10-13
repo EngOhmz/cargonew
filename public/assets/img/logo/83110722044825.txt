@@ -1,0 +1,15 @@
+https://getbootstrap.com/docs/4.0/components/modal/
+
+
+//modal on click
+
+https://mdbootstrap.com/snippets/jquery/mdbootstrap/887850
+
+
+//modal on hover
+https://mdbootstrap.com/snippets/jquery/bartek-malanowski/226737
+
+
+
+//modal on scrollable
+https://mdbootstrap.com/docs/standard/components/modal/
